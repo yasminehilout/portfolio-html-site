@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title> Page Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -11,12 +14,12 @@
     <div class="container">
         <div class="nav-wrapper">
             <div class="left-side">
-                <div class="nav-link-wrapper">
+                <div class="nav-link-wrapper active-nav-link">
                     <a href="index.html">Home</a>
                 </div>
 
                 <div class="nav-link-wrapper">
-                    a href="about.html">About</a>
+                    <a href="about.html">About</a>
                 </div>
 
             </div>
@@ -206,5 +209,18 @@
         </div>
     </div>
 </body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
 
 </html>
