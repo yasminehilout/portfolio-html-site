@@ -119,9 +119,26 @@ body {
     }
 }
 
-/* Right */
-/* .right {
-} */
-/* Footer */
-/* .footer {
-} */
+
+/*About page*/
+.two-column-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+}
+  
+.profile-content-wrapper {
+    padding: 5%;
+}
+ 
+.profile-content-wrapper h1 {
+    font-size: 2em;
+    color: white;
+}
+.profile-content-wrapper p {
+    font-size: 1em;
+    color: black;
+}
